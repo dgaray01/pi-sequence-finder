@@ -21,3 +21,16 @@ Pi Sequence Finder is a web application built with **Flask** and **mpmath** that
 1. Clone this repository:
    ```bash
    git clone https://github.com/dgaray01/pi-sequence-finder.git
+   ```
+2. Install packages:
+   ```bash
+   pip install flask mpmath
+   ```
+3. Run code:
+   ```
+   python pi.py
+   ```
+4. Access website at port 5000
+   
+### Disclaimer
+To generate more digits of pi, adjust the ``mp.dps`` value in *pi.py*. However, increasing the precision requires more computational resources and memory, which can significantly slow down processing times, especially with high values. The higher the precision, the more time and resources it will consume.
