@@ -20,4 +20,4 @@ Pi Sequence Finder is a web application built with **Flask** and **mpmath** that
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/pi-sequence-finder.git
+   git clone https://github.com/dgaray01/pi-sequence-finder.git
