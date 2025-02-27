@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Sequence in Pi</title>
+</head>
+<body>
+    <h1>Search for a Sequence in Pi</h1>
+    <form action="/search" method="POST" id="searchForm">
+        <label for="sequence">Enter sequence:</label>
+        <input type="text" id="sequence" name="sequence" required>
+        <button type="submit">Search</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        const form = document.getElementById('searchForm');
+        const resultDiv = document.getElementById('result');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const response = await fetch('/search', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+            resultDiv.textContent = data.message || data.error;
+        });
+    </script>
+</body>
+</html>
